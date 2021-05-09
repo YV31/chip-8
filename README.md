@@ -1,7 +1,7 @@
 # Chip-8 Interpreter
 
-Done Aiming simplicity and re-usability.
+Done aiming simplicity and re-usability.
 
-**TODO**:
-    - Better argument handling
-    - Documentation
+**TODO:**
+- Better argument handling
+- Documentation
