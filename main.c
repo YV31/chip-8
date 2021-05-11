@@ -97,6 +97,7 @@ int main(int argc, char **argv)
 
     if (chip == NULL) {
         perror("Failed to allocate Chip8");
+        goto FAILURE_CHIP8;
     }
 
     // TODO: Better argument handling
@@ -143,15 +144,15 @@ int main(int argc, char **argv)
         }
 
         SDL_RenderPresent(ren);
-
         SDL_Delay(delay_time);
     }
     
     chip8_destroy(chip);
-FAILURE_REN:
+FAILURE_CHIP8:
     SDL_DestroyRenderer(ren);
-FAILURE_WIN:
+FAILURE_REN:
     SDL_DestroyWindow(win);
+FAILURE_WIN:
 
     return ret_val;
 }
