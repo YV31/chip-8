@@ -1,6 +1,6 @@
 CC=gcc
 LIBS=`pkg-config --libs sdl2`
-CFLAGS=-Wall -Wextra -g `pkg-config --cflags sdl2` -DDEBUG
+CFLAGS=-Wall -Wextra -g `pkg-config --cflags sdl2` -O2
 OBJS=main.o chip8.o
 BIN=chip-8
 
