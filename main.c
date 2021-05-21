@@ -16,14 +16,12 @@ static uint8_t const keypad[KEYPAD_SIZE] = {
 };
 
 #define HZ_TO_MS(hz) (1000000L / (hz))
-#define SCALE 5
+#define SCALE 9
 #define OFFSET 0
 #define WIN_W (SCREEN_W * SCALE) + OFFSET
 #define WIN_H (SCREEN_H * SCALE)
 
 bool running = true;
-int delay_time = 0;
-int ret_val = EXIT_SUCCESS;
 
 void key_handle(Chip8 *chip)
 {
@@ -64,6 +62,9 @@ void key_handle(Chip8 *chip)
 int main(int argc, char **argv)
 {
     srand(time(NULL));
+
+    int delay_time = 0;
+    int ret_val = EXIT_SUCCESS;
 
     SDL_Window   *win = NULL;
     SDL_Renderer *ren = NULL;
